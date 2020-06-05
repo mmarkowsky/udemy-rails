@@ -4,7 +4,7 @@ RSpec.feature "Articles" do
     scenario "user create new article" do
         visit "/"
         
-        click_link "New Article"
+        click_link "New Article" 
         fill_in "Title",with: "Creating a blog"
         fill_in "Body" , with: "body text"
         click_button "Create Article"
@@ -16,7 +16,7 @@ RSpec.feature "Articles" do
     scenario "a user fails to create a article" do
         visit "/"
         
-        click_link "New Article"
+        click_link "New Article" 
         fill_in "Title",with: ""
         fill_in "Body" , with: ""
         click_button "Create Article"

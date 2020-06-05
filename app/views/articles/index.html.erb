@@ -1,1 +1,14 @@
-<%= link_to "New Article", new_article_path %>
+<% if @articles.empty?%>
+    <h1 id="no-articles">No Articles Created</h1>
+<%else%>
+    <% @articles.each do |art| %>
+        <div class="well well-lg">
+            <div class="article-title">
+                <%= link_to art.title, article_path(art)%>
+            </div>
+            <div class="article-body">
+                <%= truncate(art.body, length: 500) %>
+            </div>
+        </div>
+    <% end %>
+<%end%>

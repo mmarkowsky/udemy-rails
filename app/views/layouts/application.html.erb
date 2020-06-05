@@ -2,27 +2,21 @@
 <html>
 <head>
   <title>Demo</title>
+  <header role="banner">
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <!-- Brand -->
+        <a class="navbar-brand" href="/">Demo</a>
+        <%= link_to "New Article", new_article_path , class: "navbar-brand", id:"new-article-btn"%>
+
+    </nav>
+  </header>
   <%= csrf_meta_tags %>
 
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-</head>
-<body>
-  <header role="banner">
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <%= link_to "Demo", root_path, class: "navbar-brand" %>
 
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="nav navbar-nav">
-              <li class="active"><%= link_to "Authors", "#"%></li>
-            </ul>
-      </div>
-    </nav>
-  </header>
-  
+</head>
+<body>  
   <div class="container">
     <div class="row">
       <div class="col-md-12">
